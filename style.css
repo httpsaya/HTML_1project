@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+}
+html{
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 100%;
+}
+body{
+    background-color:cornsilk;
+    color:black;
+}
+html::-webkit-scrollbar{
+    width: 20px;
+}
+html::-webkit-scrollbar-track{
+    background: beige;
+}
+html::-webkit-scrollbar-thumb{
+    background-color:yellow ;
+}
+.header{
+    position: fixed;
+    left: 0;
+    top:0;
+    display:flex;
+    width: 100%;
+    padding: 3rem 9%;
+    background: rgba(246, 251, 175, 0.283);
+    filter: drop-shadow(10px);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+    
+}
+.logo{
+    font-size: 5rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.2rem;
+    color:rgb(74, 74, 52);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.logo:hover{
+    color:pink;
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 25px pink);
+}
+.navbar a{
+    color: black;
+    text-decoration: none;
+    font-size: 3rem;
+    margin: 4rem;
+    transition: 0.5s ease;
+    border-radius: 3px solid transparent;
+}
+.navbar a:hover,
+.navbar a.active{
+    color:yellow;
+    border-bottom: 3px solid #b5ba29;
+    background: transparent;
+    filter: drop-shadow(0 0 15px #b5ba29);
+}
+
+#menu-icons{
+    color:yellow;
+    font-size: 3.6rem;
+    display: none;
+}
+@media(max-width:995px){
+    #menu-icons{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 40%;
+        border-left: 3px solid #b5ba29;
+        border-bottom: 3px solid #b5ba29;
+        border-bottom-left-radius: 2rem;
+        padding: 1rem 3%;
+        background-color: yellow;
+        border-top: 0.1rem solid #b5ba29;
+        display: none;
+    }
+    .navbar .active{
+        display: block;
+    }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .navbar a:hover,
+    .navbar a.active{
+        padding: 1rem;
+        border-radius: 0.5rem;
+        border-bottom: 0.5rem solid black;
+    }
+}
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: cornsilk;
+}
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+#zhansaya {
+    font-size: 5rem;
+    color:#b5ba29;
+    display: inline-flex;
+    transition: 0.5s ease;
+    cursor: pointer;
+    box-shadow: 0 0 0px pink;
+}
+#zhansaya:hover{
+    transform: scale(1.3);
+    color: pink;
+    transform: scale(1.2) translateY(-5px);
+    filter: drop-shadow(0 0 5px pink);
+}
+span:not(#zhansaya){
+    color: pink;
+}
+.typewriter-text{
+    color: pink;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-img{
+    border-radius: 50%;
+}
+.home-img img{
+    position: relative;
+    width:32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 45px #b5ba29;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+img{
+    width: 500px;
+    height: 1000px;
+    top: auto;
+    object-fit: center;
+}
+.home-img img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 45px pink;
+    filter: drop-shadow(0 0 40px pink);
+}
+.home-content p{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border-radius: 0.2rem solid  #b5ba29;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    border: 0.2rem solid #b5ba29;
+    color: #b5ba29;
+}
+.social-icons a:hover{
+    background: #b5ba29;
+    box-shadow: 0 0 25px #b5ba29;
+    transform: scale(1.3) translateY(-5px);
+    color: black;
+}
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: cornsilk;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: black;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+    border: 0.2rem solid black;
+    cursor: pointer;
+}
+.btn:hover{
+    transform: scale(1.03);
+    background-color: black;
+    color: cornsilk;
+    box-shadow: 0 0 25px black;
+    filter: drop-shadow(0 0 10px black);
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-height: 100px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+/* home css end*/
+
+/* start service css*/
+.services{
+    background: cornsilk;
+}
+.services h2{
+    font-size: 4rem;
+    text-align: center;
+    color: #b5ba29;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.services h2:hover{
+    transform: scale(1.17);
+    filter: drop-shadow(0 0 25px pink);
+    color: pink;
+}
+.services-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap:2.5rem;
+}
+.service-box{
+    background-color: pink;
+    height: 300px;
+    border-radius: 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.service-box:hover{
+    transform: scale(1.07);
+    border: 1px solid pink;
+    background: transparent;
+    background-color: cornsilk;
+}
+.service-box .service-info{
+    padding: 5em;
+    display: flex;
+    color: cornsilk;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 200px;
+    text-align: left;
+    align-items: center;
+}
+.service-info h4{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+.service-info p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-height: 100px;
+    margin: auto;
+}
+.service-info:hover p ,
+.service-info:hover h4{
+    color: pink;
+}
+/*end of Services*/
+
+/*Skills Section css Starts*/
+.skills{
+    background-color: cornsilk;
+}
+.skills h2{
+    font-size: 4rem;
+    text-align: center;
+    color: #b5ba29;
+    margin-bottom: 4rem;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+.skills h2:hover{
+    transform: scale(1.2);
+    text-shadow: 0 0 2rem pink;
+    color: pink;
+}
+.skills .container{
+    background:pink;
+    color: black;
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+}
+.skills .container .row{
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+.skills .container .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    background: cornsilk;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.skills .container .bar:hover{
+    box-shadow: 0 1rem 2rem cornsilk;
+    transform: scale(1.07);
+}
+.info img{
+    float: left;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.skills .container .bar .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.skills .container .bar .info span1{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+/* Skills Section css End */
+
+/* Education Section css starts */
+.timeline-section{
+    min-height: 100vh;
+    padding: 100px 15px;
+    background: cornsilk;
+}
+
+.timeline-section h2{
+    font-size: 4rem;
+    font-weight: 700;
+    color: #b5ba29;
+    transition: 0.5s ease;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.timeline-section h2:hover{
+    transform: scale(1.27);
+    color: pink;
+    text-shadow: 0 0 25px pink;
+}
+
+
+.timeline-items{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.timeline-items::before{
+    content: " ";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: pink;
+    left: calc(50% - 1px);
+}
+
+.timeline-item{
+    margin-bottom:40px;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.timeline-dot{
+    height:21px ;
+    width: 21px ;
+    background-color: pink;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: #b5ba29;
+    margin: 6px 0 15px;
+}
+
+
+.timeline-content{
+    background-color: #b5ba29;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 30px;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.timeline-content:hover{
+    transform: scale(1.13);
+    color: pink;
+    background-color: pink;
+    box-shadow: 0 0 25px;
+
+}
+
+.timeline-content h3{
+    font-size: 20px;
+    color: cornsilk;
+    margin: 0 0 10px;
+    text-transform: capitalize;
+    font-weight: 700;
+    transition: 0.5s ease ;
+}
+.timeline-content p{
+    color: cornsilk;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22px;
+}
+.timeline-content:hover h3, 
+.timeline-content:hover p {
+    color: black; 
+}
+
+/*Конец css кода Education*/
+
+/*Contact page begins*/
+
+.contact{
+    background-color: cornsilk;
+}
+.contact h2{
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: #b5ba29;
+    transition: 0.5s ease;
+    border-radius: 50%;
+    margin-bottom: 4rem;
+}
+.contact h2:hover{
+    transform: scale(1.13);
+    color: pink;
+    text-shadow: 0 0 25px pink;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: pink;
+    background-color: cornsilk;
+    border-radius: 0.8rem;
+    border: 2px solid #b5ba29;
+    margin: 1rem 0;
+    resize: none;
+}
+.contact form .btn{
+    margin-top: 2rem;
+}
